@@ -1,36 +1,30 @@
 ---
-title: Our Coffee
+title: Your site creation process
 type: products
 page: /products.html
 image: /img/products/jumbotron.jpg
-heading: What we offer
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+heading: How we approach creating a site for you
+description: Superior web site creation
 intro:
   blurbs:
     - image: /img/illustrations/coffee.svg
-      text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+      text: >-
+        Once we have an accepted design, we convert that template into blazing
+        fast Hugo layout and content files, turning your website into a secure,
+        scalable and lightning fast work of art.
     - image: /img/illustrations/coffee-gear.svg
-      text: >
-        We offer a small, but carefully curated selection of brewing gear and
-        tools for every taste and experience level. No matter if you roast your
-        own beans or just bought your first french press, you’ll find a gadget
-        to fall in love with in our shop.
+      text: >-
+        Every page on your new site will be optimized to perfection. We are
+        fully qualified PDDMs, and also have partners who are PDDMs and can take
+        your SEO to the next level, making your site accessible and attractive
+        to search engines.
     - image: /img/illustrations/tutorials.svg
-      text: >
-        Love a great cup of coffee, but never knew how to make one? Bought a
-        fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-        to help. You can schedule a custom 1-on-1 consultation with our baristas
-        to learn anything you want to know about coffee roasting and brewing.
-        Email us or call the store for details.
+      text: >-
+        Your website shouldn't just be graphics and text, it should work for
+        you. With our marketing automation solutions, you can transform the way
+        you generate and nurture leads. Get more than just form handling. Create
+        campaigns, landing pages, email marketing and more, and when you're
+        done, analyze your results.
     - image: /img/illustrations/meeting-space.svg
       text: >
         We believe that good coffee has the power to bring people together.
@@ -39,18 +33,17 @@ intro:
         coffee making techniques. All of the artwork on display there is for
         sale. The full price you pay goes to the artist.
   heading: What we offer
-  description: >
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone.
+  description: >-
+    It all starts with a coffee. We will sit down with you and find out what you
+    want to convey to your customers and potential customers. We then work with
+    you to convert your brand guidelines into a web design.
 main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
+  heading: Get ahead of the competition
+  description: >-
+    In terms of websites, seconds count. Don't accept a bad development from a
+    back room specialist that leaves your site in the dust. Make use of new
+    techniques and technology, and watch your site overtake average sites and be
+    counted among the fastest.
   image1:
     alt: A close-up of a paper filter filled with ground coffee
     image: /img/products/products-grid3.jpg
@@ -61,42 +54,52 @@ main:
     alt: Coffee beans
     image: /img/products/products-grid1.jpg
 testimonials:
-  - author: Elisabeth Kaurismäki
+  - author: Darren Lawrence
     quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
-  - author: Philipp Trommler
+      Paraweb converted my WordPress installation into modern, static site with
+      a git based CMS. It led to a 10x increase in speed.
+  - author: Phil Beck
     quote: >-
-      Kaldi is the place to go if you want the best quality coffee. I love their
-      stance on empowering farmers and transparency.
+      I have had a 30% increase in sales thanks to Paraweb's marketing
+      automation consulting.
 full_image: /img/products/products-full-width.jpg
 pricing:
-  heading: Monthly subscriptions
+  heading: Consulting Plans
   description: >-
-    We make it easy to make great coffee a part of your life. Choose one of our
-    monthly subscription plans to receive great coffee at your doorstep each
-    month. Contact us about more details and payment info.
+    Whether you need to convert a legacy website to modern technology, implement
+    an SEO strategy or get into marketing automation, we have a plan for you.
   plans:
-    - description: Perfect for the drinker who likes to enjoy 1-2 cups per day.
+    - description: >-
+        If you have a WordPress site and you have been hacked, or your site has
+        died under load, this is perfect for you. We will convert your site into
+        blazing fast Hugo templates and reduce your hosting while making your
+        site better.
       items:
-        - 3 lbs of coffee per month
-        - Green or roasted beans"
-        - One or two varieties of beans"
-      plan: Small
-      price: '50'
-    - description: 'Great for avid drinkers, java-nsoving couples and bigger crowds'
+        - Consultation
+        - conversion
+        - and migration
+        - as well as free hosting
+      plan: Conversion
+      price: '3000'
+    - description: >-
+        Utilizing a website properly can be challenging. With our expertise, as
+        well as our partners' expertise in SEO and Marketing Automation, you can
+        make the most of the digital space.
       items:
-        - 6 lbs of coffee per month
-        - Green or roasted beans
-        - Up to 4 different varieties of beans
-      plan: Big
-      price: '80'
-    - description: Want a few tiny batches from different varieties? Try our custom plan
+        - SEO
+        - Analytics and Marketing Automation consulting and implementation
+        - depending on specifications.
+      plan: 'SEO, Analytics, M/A'
+      price: '15000'
+    - description: >-
+        Need a web site? We can help. Get a site built with the latest
+        technology and that is up to modern standards. We will also host your
+        site for free with a Git based CMS.
       items:
-        - Whatever you need
-        - Green or roasted beans
-        - Unlimited varieties
-      plan: Custom
-      price: '?'
+        - Design consultation
+        - Implementation
+        - Follow up
+      plan: New websites
+      price: POA
 ---
 
