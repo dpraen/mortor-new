@@ -1,26 +1,84 @@
 ---
-title: A beginners’ guide to brewing with Chemex
-date: 2017-01-04T15:04:10.000Z
+title: 'smackdown: wordpress vs hugo'
+date: 03/21/2017 5:04 PM
 description: >-
-  Brewing with a Chemex probably seems like a complicated, time-consuming
-  ordeal, but once you get used to the process, it becomes a soothing ritual
-  that's worth the effort every time.
-image: /img/blog/chemex.jpg
+  We take a look at Hugo vs WordPress. Which one is better overall. Most PDDMs
+  use WordPress despite its flaws, but should they be moving to Hugo?
+image: /img/wp.png
 ---
 
-This [week](/wdwdw) we’ll **take** a look at all the steps required to make astonishing coffee with a Chemex at home. The Chemex Coffeemaker is a manual, pour-over style glass-container coffeemaker that Peter Schlumbohm invented in 1941, and which continues to be manufactured by the Chemex Corporation in Chicopee, Massachusetts\*.
+The question today is:
 
-In 1958, designers at the [Illinois Institute of Technology](https://www.spacefarm.digital) said that the Chemex Coffeemaker is *"one of the best-designed products of modern times"*, and so is included in the collection of the Museum of Modern Art in New York City.
+Which is a better platform in terms of:
 
-## The little secrets of Chemex brewing
+* Speed
 
-The Chemex Coffeemaker consists of an hourglass-shaped glass flask with a conical funnel-like neck (rather than the cylindrical neck of an Erlenmeyer flask) and uses proprietary filters, made of bonded paper (thicker-gauge paper than the standard paper filters for a drip-method coffeemaker) that removes most of the coffee oils, brewing coffee with a taste that is different than coffee brewed in other coffee-making systems; also, the thicker paper of the Chemex coffee filters may assist in removing cafestol, a cholesterol-containing compound found in coffee oils. Here’s three important tips newbies forget about:
+* Security
 
-1. Always buy dedicated Chemex filters.
-2. Use a scale, don’t try to eyeball it.
-3. Never skip preheating the glass.
-4. Timing is key, don’t forget the clock.
+* Infrastructure Requirements
 
-The most visually distinctive feature of the Chemex is the heatproof wooden collar around the neck, allowing it to be handled and poured when full of hot water. This is turned, then split in two to allow it to fit around the glass neck. The two pieces are held loosely in place by a tied leather thong. The pieces are not tied tightly and can still move slightly, retained by the shape of the conical glass.
+* Flexibility
 
-For a design piece that became popular post-war at a time of Modernism and precision manufacture, this juxtaposition of natural wood and the organic nature of a hand-tied knot with the laboratory nature of glassware was a distinctive feature of its appearance.
+between WordPress and Hugo.
+
+### what is wordpress?
+
+WordPress is, by volume, the leading web site creation engine in the world, powering an impressive [25% of all web sites](http://venturebeat.com/2015/11/08/wordpress-now-powers-25-of-the-web/). It’s based on PHP and MySQL. It serves pages dynamically. Upon each request, WordPress will get information from the database, and build the page using a combination of the data, the WordPress theme and plugins, and the WordPress engine itself.
+
+### what is hugo?
+
+[Hugo](https://www.gohugo.io/) is the 2nd most popular static site generator. It is known for lightning fast speed, being written in Go, and pre-generates all of the pages of a given project. This means that the pages are not served dynamically, but rather statically. The entire site is rebuilt when a change is made, and the static assets are re-deployed.
+
+### how do they stack up?
+
+#### Speed
+
+WordPress serves pages dynamically, meaning that every time a request is made to the server, the user must wait for the WordPress engine to fetch data from the database, and wait for the page to be built by the server side scripts that make up a WordPress instance, which can be effected by multiple plugins and PHP scripts.
+
+Since this is a multi step process, it will impact page load speed.
+
+![Static vs dynamic web sites](http://www.udeserve.in/blog/wp-content/uploads/2013/10/Static-vs-dynamic-website.jpg)
+
+Hugo, on the other hand, pre-generates everything based on HTML layouts, Go HTML template logic and content files. Since the result is static HTML, there is no wait for the page to be generated before it’s served - it can just be served.
+
+Although there are ways to speed up WordPress page load speed, such as minifying assets and moving load blocking scripts from the header to the footer, these apply to Hugo as well.
+
+WordPress has a range of caching plugins available which can help, but the clear winner is Hugo.
+
+I contribute to a WordPress based blog called [The Men-Tal Hospital](http://www.thementalhospital.co.za/). I did a comparison between load times of the two sites using the [Pingdom Website Speed Test](https://tools.pingdom.com/).
+
+The Men-Tal Hospital took an average of 14 seconds to load. Raen, based on Hugo, took merely 0.68 seconds.
+
+WordPress is smacked down hard here. **Running total: Hugo 1, WordPress 0**
+
+#### security
+
+WordPress has a bad [security track record](https://premium.wpmudev.org/blog/wordpress-security-exploits/), and it’s partially due to the fact that it relies on a rather large technology stack - a web server, MySQL database, PHP installation, a WordPress instance, and then whatever plugins and themes are used to achieve the final web site build. If any of these technologies in the stack of vulnerable, it could cause a security breach. This is before considering the fact that every area where user input is allowed and talks to the WordPress instance and database adds to the attack surface area.
+
+Hugo sites, on the other hand, are statically built, and have a far smaller attack surface area.
+
+There’s no real competition in this area - Hugo smacks down WordPress again. **Running total: Hugo 2, WordPress 0**
+
+#### infrastructure requirements
+
+WordPress requires a large technology stack: a web server, PHP, and MySQL. It is also recommended that the operating system is Linux. I don’t have a problem with this, as I love Linux, but the truth is that it does narrow down your hosting choices somewhat. It also means that there’s a lot more maintenance involved in terms of software updates. The OS, database, WordPress and PHP installation must all be kept up to date. This can cause incompatibilities and errors to creep in and unless handled carefully, could become a headache.
+
+Hugo just requires a web server, as the entire site is static. Sites built with Hugo can be deployed directly on CDNs and are great choices for deploying to Cloud based services such as S3 or Azure.
+
+It’s another hard smackdown. **Running total: Hugo 3, WordPress 0**
+
+#### flexibility
+
+WordPress is very flexible at the surface level - themes can be spun up quickly which can change the look and feel of the site in short order. Plugins can be used to add almost any functionality you desire. The problem comes in when too many plugins are added, or themes become too complicated and conflict with other parts of the system. There’s no question that you can add functionality very easily to WordPress, as you can drop in PHP scripts quite easily if all else fails - but often you will do this at your peril, as WordPress over-customization can cause serious issues on your site.
+
+Hugo is flexible in a different way. It’s not so easy to make surface-level changes, but mid-level changes are much easier in Hugo, as almost all changes can be made with HTML, Go HTML templates, and content files. WordPress is a bit more flexible in some ways, as if interactive elements need to be added that require server side scripts, AJAX will have to be employed to get the functionality into a Hugo-based site, and if too many of these elements are required, Hugo is no longer a good choice.
+
+WordPress wins this one, but narrowly. **Running total: Hugo 3, WordPress 1**
+
+### conclusion
+
+If you require a lot of server-side code, Hugo may not be the right choice for you, but the reality is that most sites that WordPress and Hugo are used for do not require this functionality. Everything from site search (JSON based indexes and Google Custom Site Search) to forms (Marketing automation tools like Hubspot or Mautic) can be handled without server-side code, with better results in most cases.
+
+The speed, infrastructure and security advantages of using Hugo far outweigh any surface-level ease of use benefits that WordPress provides.
+
+Hugo wins this smackdown.
