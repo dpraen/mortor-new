@@ -1,5 +1,5 @@
 +++
-title = "Values"
-type = "values"
+title = "FAQ"
+type = "about"
 page="/about.html"
 +++
